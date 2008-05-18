@@ -1,0 +1,47 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+private_tiddler:
+  id: 1
+  private: 1
+  tags: private
+  title: diary
+  body: today i was happy
+  modifier: JoshGoebel
+  created_on: '2005-10-09'
+  updated_on: '2005-10-09'
+
+public_tiddler:
+  id: 2
+  tags: public
+  title: blog
+  body: world, read my stuff
+  modifier: JoshGoebel
+  created_on: '2005-10-09'
+  updated_on: '2005-10-09'
+
+another:
+  id: 3
+  title: todo list
+  version: 0
+  body: i have so many things to do
+  modifier: JoshGoebel
+  created_on: '2005-10-09'
+  updated_on: '2005-10-09'
+
+public_and_private:
+  id: 4 
+  tags: public private
+  private: 1
+  title: blog
+  body: world, read my stuff
+  modifier: JoshGoebel
+  created_on: '2005-10-09'
+  updated_on: '2005-10-09'
+
+tiddler_with_revs:
+  id: 5
+  title: "lots of revisions"
+  body: "this has lots of revisions"
+  version: 2
+  modifier: JoshGoebel
+  created_on: '2005-10-09'
+  updated_on: '2005-10-09'

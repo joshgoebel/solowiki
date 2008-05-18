@@ -1,0 +1,74 @@
+#Dialog
+{
+width:300px;
+background-color:#f7f7f7;
+border:1px solid #669;
+border-right:2px solid #336;
+border-bottom:2px solid #336;
+margin:0 auto;
+margin-top:5em;
+padding:15px;
+text-align:center;
+}
+
+.login h1
+{
+
+font-size:1.4em;
+margin-bottom:1em;
+font-weight:normal;
+color:#009;
+border-bottom:1px solid #ddd;
+}
+
+.login .AlertGood
+{
+background-color:pink;
+padding:7px;
+border:1px solid brown;
+margin:1em 0;
+}
+
+.login .AlertBad
+{
+font-size:1.2em;
+font-weight:bold;
+background-color:brown;
+color:white;
+padding:7px;
+xborder:1px solid brown;
+margin:1em 0;
+}
+
+
+.login p {
+	margin: 10px 0 0 0;
+}
+
+.login input {
+	font-size: 1.2em;
+	font-family:Arial;
+	border:default;
+	padding:2px 5px;
+}
+
+.login input[type=text],
+.login input[type=password]
+{
+	border:1px outset #999;
+}
+
+.login input#user_password {
+	width: 200px;
+	margin-right: 5px;
+	margin-top:7px;
+}
+
+.login .button
+{
+margin-top:10px;
+padding:2px 15px;
+xfont-family:'Trebuchet MS';
+font-weight:bold;
+-moz-border-radius:5px;
+}

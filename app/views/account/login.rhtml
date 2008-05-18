@@ -1,0 +1,25 @@
+<% 
+@body_class="login"
+@onload="$('user_password').focus();"
+%>
+    
+<div id="Dialog">  
+
+
+
+<% if @flash["good"] %>
+  <div class="AlertGood"><%= @flash["good"] %></div>
+<% elsif @flash["bad"] %>
+  <div class="AlertBad"><%= @flash["bad"] %></div>
+<% end %>
+
+<%= start_form_tag({:action=> "login"} , :id => "loginForm") %>
+
+<label for="user_password">Password</label>
+<br />
+<input name="user_password" type="password" id="user_password" /> 
+<br />
+<input type="submit" value="Sign In" class="button" />
+
+<%= end_form_tag %>
+</div>

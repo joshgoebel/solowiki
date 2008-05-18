@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<title>SoloWiki</title>
+
+<%= stylesheet_link_tag "screen_8_18", :media => 'screen' %>
+<%= stylesheet_link_tag "default", :media => 'screen' %>
+<%= stylesheet_link_tag "login", :media => 'screen' %>
+
+<% if @javascript %>
+<script type="text/javascript"><%=@javascript%></script>
+<% end %>
+</head>
+<body onLoad="<%=@onload%>" class="<%=@body_class%>">
+<% if @controller.action_name=="edit" %>
+<div id="topheader">
+<div>
+<div class="appname">SoloWiki</div>
+<!--
+<div class="desc">
+Our official <strong><a href="http://www.serversidewiki.com#LaunchAnnouncement">launch date and pricing</a></strong> has just been announced!
+</div>
+-->
+
+<ul>
+
+<% if logged_in? and @controller.action_name=="edit" %>
+<!--
+	<li><%= link_to "Account", :controller => "account", :action => "settings" %></li>
+-->
+	<li><%= link_to "Logout", :controller => "account", :action => "logout" %></li>
+<% else %>
+	<li><%= link_to "Login", :controller => "account", :action => "login" %></li>
+<% end %>
+</ul>
+<br style="clear:both;" />
+<% end %>
+</div>
+
+</div>
+
+	<div id="saveTest"></div>
+
+	<div id="contentWrapper">
+		<div id="header">
+<!--
+		<% if not @controller.action_name=="edit" %>
+		<div class="loginlink">
+		<%= link_to "Login", :controller => "account", :action => "login" %>
+		</div>
+		<% end %>
+-->
+			<div id="titleLine">
+				<span id="siteTitle" style="color:#cf6;">
+				SoloWiki
+				</span>
+				<span id="siteSubtitle">
+          Love hurts - go solo.
+				</span>
+			</div>
+		</div>
+
+<div id="displayArea">
+<%= @content_for_layout %>
+</div>
+
+  
+</div> <!-- contentWrapper -->
+
+
+</body>
+</html>

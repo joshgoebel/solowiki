@@ -1,0 +1,39 @@
+== Getting started
+
+1. modify config/database.yml for your setup (defaults to sqlite3)
+2. rake db:schema:load (to load the database)
+3. edit app/model/user.rb to set a password that will determine who can edit your wiki
+4. script/server (or mongrel_rails start)
+5. Go to http://localhost:3000/ and see your shiny new solowiki
+
+== About TiddlyWiki changes
+
+SoloWiki sports numerous changes and additions to TiddlyWiki 1.2.29 including:
+
+* ServerSide support (of course!)
+* Context sensitive help when editing special pages
+* Real-time to-do lists
+* Public and private pages
+* I forget the rest, honestly
+* "Tiddlers" => "Pages"
+* Textile support
+* Drag and drop re-ordering of pages
+* SortableGrid
+
+== How is SoloWiki different than ServerSideWiki?
+
+1. No sub-domain or multiple account support.
+2. No account settings panel and only the default blue CSS theme.
+
+== How can I use SoloWiki to support multiple users editing the wiki?
+
+1. Each user logs in with the shared password
+2. Go into the wiki control panel
+3. Select the Options tab
+4. Change the "Sign edits as:" name for each user
+
+Note: These settings are preserved with a cookie, so as long as the two users are on different computers, or different accounts on the same computer this should work just fine.
+
+== Other notes
+
+Enjoy.

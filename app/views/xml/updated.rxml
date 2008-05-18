@@ -1,0 +1,31 @@
+xml.instruct!
+
+xml.rss "version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/" do
+  xml.channel do
+
+    xml.title       	@feed_title.nil? ? "SoloWiki" : @feed_title 
+    xml.link        	"http://" + @request.host_with_port + "/";
+	 xml.pubDate		 CGI.rfc1123_date Time.now
+    xml.lastBuildDate  CGI.rfc1123_date @tiddlers.first.updated_on if @tiddlers.any?
+	 xml.description 	@feed_desc.nil? ? "A SoloWiki RSS feed... create a SubTitle page to change this text." : @feed_desc;
+	 xml.generator		"SoloWiki"
+	 xml.docs			"http://blogs.law.harvard.edu/tech/rss"
+	 xml.ttl				"120"
+
+    @tiddlers.each do |tiddler|
+      xml.item do
+        xml.title       tiddler.title
+		  xml.link			"http://" + @request.host_with_port + "#" + tiddler.hash_title;
+		  if tiddler.tags.split(" ").include?("textile")
+	        xml.description textilize(tiddler.unescape)
+	     else
+	     	  xml.description tiddler.body.gsub('\\n',"<br />")
+	     end
+        xml.pubDate     CGI.rfc1123_date tiddler.created_on 
+        xml.guid			"http://" + @request.host_with_port + "#" + tiddler.hash_title;
+   	  xml.author      tiddler.modifier
+      end
+    end
+
+  end
+end

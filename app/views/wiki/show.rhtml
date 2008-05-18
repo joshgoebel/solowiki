@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<title>SoloWiki</title>
+
+<script type="text/javascript">
+var version = {major: 1, minor: 2, revision: 29, date: new Date(2005,7-1,27), extensions: {}};
+</script>
+
+<%= javascript_include_tag "tiddly_9_6.js" %>
+<%= javascript_include_tag "sortable_grid", "addons", "prototype", "dragdrop", "effects", "controls" %>
+<%= javascript_include_tag "textile" %>
+
+<script type="text/javascript">
+<% if @session[:user] and @controller.action_name=="edit" -%>
+	var user_logged_in = true;
+<% else -%>
+	var user_logged_in = false;
+<% end -%>
+
+var public_wiki = false;
+var max_tiddlers=1000000;
+var account_type="Solo";
+
+function startup()
+{
+document.getElementById("loading").style.display="none";
+document.getElementById("application").style.display="block";
+//window.onbeforeunload=preventClose;
+}
+</script>
+
+<%= javascript_include_tag "serverside_9_6.js", "revisions" %>
+<%= stylesheet_link_tag "screen_8_18.css", :media => 'screen' %>
+<%= stylesheet_link_tag "default", :media => 'screen', :title => "user" %>
+<%= stylesheet_link_tag "print", :media => 'print' %>
+</head>
+<body onload="startup(); main()">
+
+<div id="loading">
+<p class="starting">Starting...  <img src="/images/indicator.gif" /></p>
+<p class="relax">Relax, once I'm loaded I'm <strong>fast</strong>.</p>
+</div>
+
+<div id="application" style="display:none;">
+
+	<div id="copyright">
+	Welcome to TiddlyWiki by Jeremy Ruston, Copyright &copy; 2005 Osmosoft Limited
+	</div>
+	<div id="saveTest"></div>
+
+	<div id="contentWrapper">
+		<div id="header">
+		<ul>
+
+			<div id="logged_in_actions">
+			<li>
+			<%= link_to_remote "Logout", :url => { :controller => "account", :action => "logout" }, 200 => "logout();" %>
+			</li>
+			</div>
+
+			<div id="logged_out_actions">
+			<li><%= link_to "Login", :controller => "account", :action => "login" %></li>
+			</div>
+		
+		</ul>
+			<div id="titleLine">
+				<span id="siteTitle"></span>
+				<span id="siteSubtitle"></span>
+			</div>
+		</div>
+		<div id="mainMenu"></div>
+			<div id="sidebarOptions"></div>
+			<div id="sidebarTabs"></div>
+		<div id="licensePanel">
+			<p>SoloWiki has the following people to thank:</p>
+				<ul>
+				<li><a rel="license" href="http://www.tiddlywiki.com" target="_blank">
+					TiddlyWiki by Jeremy Ruston.
+				</a>
+				</li>
+				<li>
+				<a rel="license" href="http://snapgrid.com" target="_blank">
+					GTD TiddlyWiki by Nathan Bowers.
+				</a></li>
+				<li>
+				<a rel="license" href="http://informationality.com/gtdtagglywiki/" target="_blank">
+					GTDTagglyWiki by Jody Foo.
+				</a></li>
+				<li>
+				<a rel="license" href="http://homes.jcu.edu.au/~ccscb/" target="_blank">
+					Simon Baird's sweet variation.
+				</a>
+				</li>
+				<li>
+				<a rel="license" href="http://www.serversidewiki.com/" target="_blank">
+					Josh Goebel of ServerSideWiki.
+				</a>
+				</li>
+
+				</ul>
+		</div>
+		<div id="displayArea">
+			<div id="messageArea"></div>
+			<div id="tiddlerDisplay"></div>
+			<div id="logger"><span class="title">SystemLogger</span></div>
+		</div>
+	</div>
+	<div id="storeArea">
+<% 
+for tiddler in @tiddlers do 
+-%>
+<div tiddler="<%=h tiddler.title%>" modified="<%=tiddler.modified%>" modifier="<%=tiddler.modifier%>" tags="<%=tiddler.tags%>" dbid="<%=tiddler.id%>"><%=tiddler.body %></div>
+<% end -%>
+</div>
+</div> <!-- application -->
+
+	</body>
+</html>

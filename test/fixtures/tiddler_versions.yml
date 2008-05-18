@@ -1,0 +1,19 @@
+first_version:
+#  id: 1
+  tiddler_id: 5
+  version: 1
+  title: "lots of resions"
+  body: "this has lots of revisions"
+  updated_on: <%= 2.day.ago.strftime("%Y-%m-%d %H:%M:%S") %>
+  created_on: <%= 5.days.ago.strftime("%Y-%m-%d %H:%M:%S") %>
+  modifier: JoshGoebel
+
+second_version:
+#  id: 2
+  tiddler_id: 5
+  version: 2
+  title: "lots of revisions"
+  body: "this has lots of revisions, really"
+  updated_on: <%= 1.day.ago.strftime("%Y-%m-%d %H:%M:%S") %>
+  created_on: <%= 5.days.ago.strftime("%Y-%m-%d %H:%M:%S") %>
+  modifier: JoshGoebel

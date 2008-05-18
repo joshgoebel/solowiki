@@ -1,0 +1,151 @@
+/* LAYOUT ELEMENTS ========================================================== */
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    background: #fff;
+	color: #000;
+	width: 2.5in;
+	height: 4.7in;
+    font-size: 6.2pt;
+	font-family: "Lucida Grande", "Bitstream Vera Sans", Helvetica, Verdana, Arial, sans-serif;
+}
+
+img {
+	max-width: 2.2in;
+	max-height: 4.3in;
+}
+
+/* Josh added */
+#mainMenu,
+#sidebarTabs,
+#sidebarOptions,
+#licensePanel,
+#topheader,
+#savetest,
+#logger,
+.tiddler .handle,
+.taggedTiddlers a:link.newTagged,
+.taggedTiddlers a:visited.newTagged
+{ 
+display:none; 
+}
+
+.tiddler .icon { display:none !important; }
+
+.tiddler .footer
+{
+margin:0.5em 0 1.5em;
+}
+.taggedTiddlers { 
+margin:0.5em 0; 
+padding:0.5em;
+}
+
+.taggedTiddlers ul { margin-left: 1.5em; }
+.taggedTiddlers .legend { font-weight:bold; }
+
+#header, #side_container, #storeArea, #copyright, .toolbar, #floater, #messageArea, .save_accesskey, .site_description
+{
+	display: none;
+}
+
+#tiddlerDisplay, #displayArea
+{
+	display: inline;
+}
+
+.tiddler {
+	margin: 0 0 2em 0;
+	border-top: 1px solid #000;
+	page-break-before: always;
+	line-height:1.3em;
+}
+
+.tiddler:first-child {
+	page-break-before: avoid;
+}
+
+.title {
+    font-size: 1.6em;
+    font-weight: bold;
+	margin-bottom: .3em;
+	padding: .2em 0;
+	border-bottom: 1px dotted #000;
+}
+
+p, blockquote, ul, li, ol, dt, dd, dl, table
+{
+	margin: 0 0 .3em 0;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	margin: .2em 0;
+}  
+
+h1
+{
+	font-size: 1.5em;
+}
+
+h2
+{
+	font-size: 1.3em;
+}
+
+h3
+{
+	font-size: 1.25em;
+}
+
+h4
+{
+	font-size: 1.15em;
+}
+
+h5
+{
+	font-size: 1.1em;
+}
+
+blockquote
+{
+	margin: .6em;
+	padding-left: .6em;
+	border-left: 1px solid #ccc;
+}
+
+ul
+{
+	list-style-type: circle;
+}
+
+li
+{
+	margin: .1em 0 .1em 2em;
+	line-height: 1.4em;	
+}
+
+table
+{
+    border-collapse: collapse;
+	font-size: 1em;
+}
+
+td, th
+{
+	border: 1px solid #999;
+	padding: .2em;
+}
+
+hr {
+    border: none;
+    border-top: dotted 1px #777;
+    height: 1px;
+    color: #777;
+	margin: .6em 0;
+}

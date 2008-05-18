@@ -1,0 +1,346 @@
+
+body {
+    background:#369;
+	 color: #000;
+    font: 90% "Lucida Grande", "Trebuchet MS", "Bitstream Vera Sans", Verdana, Helvetica, sans-serif;
+	_text-align: center;
+}
+
+#topheader div.inside
+{
+width:95%;
+}
+
+#contentWrapper
+{
+	xmargin: 0 auto;
+	xwidth: 775px;
+	x_width: 770px; /* CSS UNDERSCORE HACK FOR PROPER WIN/IE DISPLAY */
+	_text-align: left; /* CSS UNDERSCORE HACK FOR PROPER WIN/IE DISPLAY */	
+	position:relative;
+	xwidth:100%;
+	xwidth:auto;
+	height:1%;
+}
+
+#header
+{
+	color: #fff;
+	padding: 10px 20px 10px 0;
+	margin:0;
+	background-color:#024;
+	xwidth:98%;
+	xbackground-color:#f7f7f7;
+	padding-left:20px;
+	border-bottom:2px solid #024;
+	xdisplay:none;
+}
+
+#header ul li a
+{
+font-size:0.8em;
+font-family:Verdana, Tahoma, Arial, Helvetica, sans-serif;
+text-decoration:underline;
+xpadding:3px 15px;
+}
+
+#header ul li a:hover
+{
+font-size:0.8em;
+font-family:Verdana, Tahoma, Arial, Helvetica, sans-serif;
+text-decoration:underline;
+background-color:#036;
+xpadding:3px 15px;
+}
+
+
+#header .tiddlyLink
+{
+xcolor:#069;
+xcolor:#eef;
+color:#ffd700; /* gold */
+color:#ffda33;
+}
+
+#sidebarTabs
+{
+font-size:13px;
+}
+
+#mainMenu
+{
+xdisplay:none;
+float:left;
+}
+
+#mainMenu {
+   xline-height: 166%;
+	xbackground: #600;
+	background: #036;
+	xborder-right: 3px solid #500;
+	padding:10px 0;
+	margin-top:1em;
+	margin-left:0.75em;
+	width:12em;
+	-moz-border-radius:10px;
+	border-right:2px solid #024;
+	border-bottom:2px solid #024;
+	float:left;
+	display:inline;
+}
+
+#mainMenu hr { color:#036; }
+
+#mainMenu .tiddlyLink {
+    color: #fff;
+	xbackground: #700;
+	display: block;
+	padding: 5px 25px;
+	xheight: 22px;
+	xline-height: 22px;
+	xborder-bottom: 1px solid #500;
+	xborder-top: 1px solid #900;
+	xfont-size:1.1em;
+	xfont-weight:bold;
+	xcolor:#eee;
+}
+
+#mainMenu .tiddlyLink:hover {
+	color:gold;
+	font-weight:bold;
+	background:#024;
+}
+
+#sidebarTabs .tabset
+{
+xbackground-color:#000;
+}
+
+#sidebarTabs
+{
+	position: absolute;
+	right: 1em;
+	width: 16em;
+	float:right;
+	color: #000000;
+	margin-top:1.3em;
+	xtop:5em;
+	xmargin-bottom:1em;
+}
+
+#sidebarTabs .tab
+{
+border-left:1px solid #999;
+border-top:1px solid #999;
+border-right:1px solid #aaa;
+margin-left:0.0em;
+color:white;
+background-color: #f7f7f7;
+}
+
+#sidebarTabs a.tabSelected:link,
+#sidebarTabs a.tabSelected:visited {
+	border:1px solid #666;
+	border-top:2px solid #8ac;
+	border-bottom:1px solid #f7f7f7;
+	color: #000;
+	font-weight:bold;
+	color:#333;
+}
+
+#sidebarTabs a.tabUnselected:link,
+#sidebarTabs a.tabUnselected:visited {
+background-color:#ddd;
+border-bottom:1px solid #ccc;
+color:black;
+}
+
+#sidebarTabs .tabContents {
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	background-color: #996633;
+	background: #960;
+	xborder-right:3px solid #630;
+	xmargin-top:2px;
+	background:#f7f7f7;
+	border-left:1px solid #999;
+	-moz-border-radius:0 10px 10px 10px;
+	border-right:2px solid #666;
+	border-bottom:2px solid #666;
+
+	width:16em;
+	overflow:hidden;
+}
+
+#sidebarTabs .tabContents ul li { color:#789; }
+
+html>body #sidebarTabs .tabContents { width:auto; overflow:inherit;  }
+
+#sidebarTabs .tabContents .tiddlyLink {
+color: #069;
+xmargin-left:-2px;
+font-family:Arial, Helvetica, sans-serif;
+font-size:0.95em;
+}
+
+#sidebarTabs .tabContents .tiddlyLink:hover {
+color: white;
+}
+
+#sidebarTabs h4
+{
+background-color:transparent;
+border-bottom:1px solid #ddd;
+margin-top:0;
+margin-bottom:0;
+padding-left:0;
+font-weight:normal;
+font-size:1em;
+}
+
+#sidebarTabs h4.named {}
+
+#sidebarOptionsparent
+{
+xfloat:left;
+xclear:left;
+}
+
+#sidebarOptions {
+	xposition: absolute;
+	xleft: 0em;
+	float:left;
+	clear:left;
+	width: 12em;
+	padding: 1.5em 0.5em 0.5em 0.5em;
+	padding:10px 0;
+	margin-left:0.75em;
+	margin-top:1em;
+	-moz-border-radius:10px;
+	xborder-top:2px solid #048;
+	xborder-left:2px solid #048;
+	xbackground:#006090;
+	display:inline;
+
+}
+#sidebarOptions .button
+{
+color:white;
+padding:5px 25px;
+}
+
+#sidebarOptions input
+{
+margin-left:25px;
+width:8em;
+}
+
+#sidebarOptions .button:hover
+{
+xcolor:gold;
+background-color:#024;
+background-color:#058;
+}
+
+
+#displayArea {
+	margin: 1em 16.25em 0em 13.75em;
+	width:auto;
+	xfloat:left;
+	xposition:absolute;
+	xtop:5em;
+	xdisplay:none;
+}
+
+.tiddler
+{
+width:99%;
+position:relative;
+width:100%;
+background:white;
+border:1px solid #bbb;
+margin: 0 0 10px 0;
+padding: 0 15px;
+-moz-border-radius:10px;
+border-right:2px solid #999;
+border-bottom:2px solid #999;
+}
+
+html>body .tiddler { width:auto; }
+
+.taggedTiddlers {
+	width:auto;
+	height:1%;
+}
+html>body .taggedTiddlers { height:auto; }
+
+#licensePanel
+{
+width:12em;
+float:left;
+clear:left;
+xdisplay:none;
+padding:0 20px;
+}
+
+#licensePanel li,
+#licensePanel li a
+ { color:#def; }
+
+.title {
+    font-size: 1.5em;
+	padding: 0 0 0 0;
+    font-weight: bold;
+    display: block;
+	color: black;
+}
+
+
+.tiddler .toolbar .button
+{
+padding: 1px 5px;
+border:1px solid white;
+
+text-decoration: none;
+border: 1px solid #ccc;
+border-bottom:2px solid #aaa;
+border-right:2px solid #aaa;
+-moz-border-radius:3px;
+background: #eee;
+color:#000;
+}
+.toolbar .button:hover
+ {
+  color: brown;
+	background: #f7f7f7;
+}
+
+.viewer pre
+{
+border:1px solid #cde;
+background-color:#f0f7ff;
+}
+
+.editor input, .editor textarea {
+    display: block;
+	font: 125% "Andale Mono", "Monaco", "Lucida Console", "Courier New", monospace;
+	margin: 0 0 10px 0;
+   border: 1px outset #333;
+	padding: 2px 3px;
+}
+
+.editor input:focus, .editor textarea:focus
+{
+	background: #ffd;
+	border: 1px solid #009 !important;
+}
+
+label { color:#666; }
+
+div.auto_complete ul li.selected { 
+background:#dae9ff;
+color:black;
+}
+div.auto_complete ul li  { color:#333; }
+div.auto_complete ul li strong { 
+color:black;
+}
